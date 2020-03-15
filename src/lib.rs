@@ -159,8 +159,7 @@ where
     I2C: blocking::i2c::Read<Error = I2cE> + blocking::i2c::Write<Error = I2cE>,
     ALARM: InputPin<Error = PinE>,
 {
-    //const I2C_ADDRESS: u8 = 0b1100100;
-    const I2C_ADDRESS: u8 = 0b11001000;
+    const I2C_ADDRESS: u8 = 0b1100100;
 
     /// Construct a driver for the LTC2942 battery monitor.
     ///
