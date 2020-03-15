@@ -125,6 +125,7 @@ pub enum Threshold {
 }
 
 /// Associated error types indicating invalid operation of the driver.
+#[derive(Debug)]
 pub enum Error<I2cE> {
     /// An error occurred with the associated I2C interface.
     Interface(I2cE),
