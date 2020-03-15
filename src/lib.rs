@@ -237,8 +237,10 @@ where
     fn read_register(&mut self, register: Register) -> Result<u16, Error<I2cE>> {
         let mut buffer: [u8; 2] = [0; 2];
         let register_size: usize = match register {
-            Register::Status => return Err(Error::Size),
-            Register::Control | Register::VoltageThresholdLow | Register::VoltageThresholdHigh => 1,
+            Register::Status
+            | Register::Control
+            | Register::VoltageThresholdLow
+            | Register::VoltageThresholdHigh => 1,
             _ => 2,
         };
 
